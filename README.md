@@ -5,7 +5,9 @@ This version have include more type of math.
 
 Include:
 
--Geometry type
+-Geometry type (circle,triangle,square,rectangle,parallelogram)
+
+-In algebra, Fraction is included.
 
 -Bug fixed
 
@@ -16,5 +18,7 @@ Include:
 Haiz! It take a lot of time to make.
 
 Hope you enjoy!!
+
+
 
 

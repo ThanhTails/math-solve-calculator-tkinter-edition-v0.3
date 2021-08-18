@@ -1,16 +1,11 @@
 from tkinter import*
 from math import *
-import triangle
-import square
-import circle
-import dimwin
-import plus
-import minus
-import multi
-import divide
-import equation1
-import equation2
-import double
+from sys import*
+path.append("./data/algebra")
+path.append("./data/algebra/equation")
+path.append("./data/geometry")
+path.append("./data/geometry/box")
+import rectangle,trapezoid,circle,divide,plus,multi,minus,double,equation1,equation2,parallelogram,dimwin,triangle,square,diamond,divi,box
 #algebra window
 
 def algebra_win():
@@ -34,7 +29,9 @@ def algebra_win():
   equation_t2.pack()
   dim=Button(al_main,text="Div and mod",command=dim_win1,fg="yellow",bg="red")
   dim.pack()# div mod button
-  back=Button(al_main,text="Back",fg="yellow",bg="red",command=close_al)#back to mainh
+  fr=Button(al_main,text="Fraction",fg="yellow",bg="red",command=fr_o)
+  fr.pack()
+  back=Button(al_main,text="Back",fg="yellow",bg="red",command=close_al)#back to main
   back.pack()
 def close_al():
   al_main.destroy()
@@ -74,6 +71,16 @@ def geometry_w():
   circlek.pack()
   squarek=Button(geometry_win,text="Square",fg="yellow",bg="blue",command=squares)
   squarek.pack()
+  parak=Button(geometry_win,text="Parallelogram",fg="yellow",bg="blue",command=parao)
+  parak.pack()
+  reck=Button(geometry_win,text="Rectangle",fg="yellow",bg="blue",command=reco)
+  reck.pack()
+  trac=Button(geometry_win,text="Trapezoid",bg="blue",command=trap,fg="yellow")
+  trac.pack()
+  dia=Button(geometry_win,text="Diamond",bg="blue",fg="yellow",command=diao)
+  dia.pack()
+  box=Button(geometry_win,text="Box (3D shape)",bg="blue",fg="yellow",command=open_box)
+  box.pack()#ATTENTION!!!!!
   close=Button(geometry_win,text="close",command=gd_close)
   close.pack()
   
@@ -82,19 +89,30 @@ def gd_close():
 
 def triangle_w1():#triangle
   triangle.triangle_w()
+def fr_o():#fraction
+  divi.divi_win()
 
 
 #square
 def squares():#square
   square.squarex()
+
+def trap():
+  trapezoid.trap_win()
   
-
-
 def circles():#circle
   circle.circle()
 
+def parao():#parallelogram
+  parallelogram.para_win()
 
+def reco():#rectangle
+  rectangle.rectan_win()
+def diao():
+  diamond.dia_win()
 
+def open_box():
+  box.box_win()
 
 def break_on():
   main.destroy()

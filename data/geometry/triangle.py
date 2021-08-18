@@ -9,6 +9,10 @@ def triangle_w():
   Normal_area.pack()
   Normal_per=Button(triangle_main,text="Normal Perimeter",fg="green",command=triangle_normal_per)
   Normal_per.pack()
+  close=Button(triangle_main,text="Close",command=close_triangle_m)
+  close.pack()
+def close_triangle_m():
+  triangle_main.destroy()
 
 def pytago_w():
   global pytago_main

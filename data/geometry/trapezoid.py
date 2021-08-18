@@ -1,0 +1,91 @@
+from tkinter import*
+def trap_win():
+  global trap_main
+  trap_main=Tk()
+  trap_main.geometry("500x500")
+  trap_main.title("Trapzoid")
+  area=Button(trap_main,text="Area",fg="green",command=trap_area)
+  area.grid(row=0,column=0)
+  per=Button(trap_main,text="Perimter",fg="green",command=trap_per)
+  per.grid(row=1,column=0)
+  clo=Button(trap_main,text="Close",fg="green",command=close_trap)
+  clo.grid(row=2,column=0)
+def close_trap():
+  trap_main.destroy()
+def trap_area():
+  global trap_aw
+  global a,b,h
+  trap_aw=Tk()
+  trap_aw.geometry("300x300")
+  trap_aw.title("Area")
+  a=Entry(trap_aw,width=5)
+  a.grid(row=0,column=0)
+  plus=Label(trap_aw,text="+")
+  plus.grid(row=0,column=1)
+  b=Entry(trap_aw,width=5)
+  b.grid(row=0,column=2)
+  cr=Label(trap_aw,text="----------------------")
+  cr.grid(row=1,column=0)
+  two=Label(trap_aw,text="2")
+  two.grid(row=2,column=0)
+  equal=Label(trap_aw,text="x")
+  equal.grid(row=1,column=1)
+  h=Entry(trap_aw,width=5)
+  h.grid(row=1,column=3)
+  start=Button(trap_aw,text="Start",command=start_atrap)
+  start.grid(row=3,column=0)
+  quit=Button(trap_aw,text="Close",command=close_atrap)
+  quit.grid(row=4,column=0)
+def close_atrap():
+  trap_aw.destroy()
+def start_atrap():
+  a1=a.get()
+  b1=b.get()
+  h1=h.get()
+  a2=int(a1)
+  b2=int(b1)
+  h2=int(h1)
+  ans=str(((a2+b2)/2)*h2)
+  ans1=Label(trap_aw,text="The answer is: "+ans)
+  ans1.grid(row=5,column=0)
+def trap_per():
+  global trap_pw
+  global a,b,c,d
+  trap_pw=Tk()
+  trap_pw.geometry("300x300")
+  trap_pw.title("Perimeter")
+  a=Entry(trap_pw,width=5)
+  a.grid(row=0,column=0)
+  plus=Label(trap_pw,text="+")
+  plus.grid(row=0,column=1)
+  b=Entry(trap_pw,width=5)
+  b.grid(row=0,column=2)
+  cr=Label(trap_pw,text="+")
+  cr.grid(row=0,column=3)
+  c=Entry(trap_pw,width=5)
+  c.grid(row=0,column=4)
+  dr=Label(trap_pw,text="+")
+  dr.grid(row=0,column=5)
+  d=Entry(trap_pw,width=5)
+  d.grid(row=0,column=6)
+
+  start=Button(trap_pw,text="Start",command=start_ptrap)
+  start.grid(row=1,column=0)
+  quit=Button(trap_pw,text="Close",command=close_ptrap)
+  quit.grid(row=2,column=0)
+def close_ptrap():
+  trap_pw.destroy()
+def start_ptrap():
+  a1=a.get()
+  b1=b.get()
+  c1=c.get()
+  d1=d.get()
+  a2=int(a1)
+  b2=int(b1)
+  c2=int(c1)
+  d2=int(d1)
+  ans=str(a2+b2+c2+d2)
+  ans1=Label(trap_pw,text="The answer is: "+ans)
+  ans1.grid(row=3,column=0)
+
+
